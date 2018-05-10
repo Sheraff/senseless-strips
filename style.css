@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'Nanda';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Nanda'), url('/res/font/Nanda.woff2') format('woff2'), url('/res/font/Nanda.woff') format('woff'), url('/res/font/Nanda.ttf') format('truetype'), url('/res/font/Nanda.eot') format('embedded-opentype');
+}
+body {
+  margin: 0;
+  font-family: Nanda;
+  font-size: 30px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1,
+h2 {
+  margin: 0;
+  font-weight: 400;
+}
+h1 {
+  margin-top: 4rem;
+  margin-bottom: -0.25em;
+  text-align: center;
+  font-size: 10rem;
+}
+ul {
+  display: flex;
+  padding: 2rem;
+  list-style: none;
+}
+ul::before,
+ul::after {
+  display: inline-block;
+  flex: 1;
+  content: '';
+}
+ul li {
+  position: relative;
+  display: inline-block;
+  flex: 2;
+  min-width: 75px;
+  max-width: 150px;
+  transition: text-shadow 0.25s;
+  text-align: center;
+  vertical-align: middle;
+}
+ul li a {
+  display: block;
+}
+ul li:nth-last-child(1),
+ul li:nth-last-child(2),
+ul li:nth-last-child(3) {
+  position: relative;
+  top: -0.125em;
+  flex: 1;
+  min-width: 50px;
+  max-width: 100px;
+}
+ul li:nth-last-child(1) svg,
+ul li:nth-last-child(2) svg,
+ul li:nth-last-child(3) svg {
+  width: auto;
+  height: 1em;
+}
+ul li:hover {
+  text-shadow: -0.5px 0 0.25px black;
+}
+ul li:hover svg path {
+  stroke: black;
+  stroke-width: 3%;
+}
+main {
+  position: relative;
+  display: flex;
+}
+main nav {
+  flex: 1;
+  text-align: center;
+  font-size: 5em;
+  font-weight: 100;
+}
+main nav:first-of-type {
+  order: 1;
+}
+main nav:last-of-type {
+  order: 3;
+}
+main article {
+  flex: 1;
+  order: 2;
+}
+main article img {
+  display: block;
+  width: 90vw;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+}
+footer {
+  margin: 4rem 0;
+  font-size: 1rem;
+}
+footer h2 {
+  display: inline-block;
+  width: 49%;
+}
+footer h2:nth-child(2n+1) {
+  text-align: right;
+}
+footer h2:nth-child(2n) {
+  text-align: left;
+  font-weight: 800;
+}
+footer h2:nth-child(2n) a {
+  padding-left: .25em;
+}
+body > svg {
+  display: none;
+}
+.squiggle {
+  filter: url("#squiggly-0");
+}
